@@ -1,5 +1,14 @@
 # terraform-azure-mcaf-pdns-zones
-Terraform Module to create all privatelink dns zones
+Terraform Module to create all privatelink dns zones except `privatelink.azure.com` and (by default) any zone from microsoft containing a `{dnsPrefix}` annotation.
+
+> [!IMPORTANT]
+> If you do not use private link scope for monitoring, ensure you add the following to `zone_resolution_policies`
+>```terraform
+>zone_resolution_policies = {
+>  "privatelink.monitoring.azure.net" = "NxDomainRedirect"
+>}
+>```
+
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

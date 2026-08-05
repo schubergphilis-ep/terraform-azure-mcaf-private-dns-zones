@@ -3,14 +3,9 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "location" {
+variable "locations" {
   description = "Location used for the resource group and in some Private DNS Zones"
-  type        = string
-}
-
-variable "shortlocation" {
-  description = "shortcode of the location used in some Private DNS Zones"
-  type        = string
+  type        = set(string)
 }
 
 variable "tags" {
@@ -41,4 +36,10 @@ variable "zone_resolution_policies" {
   description = "Map of zone names to their resolution policies. Each Zone can have either 'Default' or 'NxDomainRedirect' as a value. If the zone is not specified, 'Default' will be used for all zones"
   type        = map(string)
   default     = {}
+}
+
+variable "partition_count" {
+  description = "amount of private dns zones to pre-emptively create for partitioned DNS zones, defaults to 10 based on `https://github.com/Azure/static-web-apps/issues/983`, which is the only zone requiring a partition id"
+  type        = number
+  default     = 10
 }
