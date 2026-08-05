@@ -1,5 +1,7 @@
 # terraform-azure-mcaf-pdns-zones
-Terraform Module to create all privatelink dns zones
+Terraform Module to create all privatelink dns zones except `privatelink.azure.com` and (by default) any zone containing 
+
+
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
