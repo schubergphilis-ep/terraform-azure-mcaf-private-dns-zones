@@ -28,7 +28,7 @@ locals {
     "privatelink.${local.location_lookup[location].short_name}.prometheus.monitor.azure.com"
   ]])
 
-  partitioned_private_dns_zones = [for i in range(var.partition_count + 1) : format("privatelink.%s.azurestaticapps.net", i)]
+  partitioned_private_dns_zones = [for i in range(1, var.partition_count) : format("privatelink.%s.azurestaticapps.net", i)]
 
   private_dns_zones = {
     for dns_zone in distinct(concat(var.additional_zones, local.location_private_dns_zones, local.partitioned_private_dns_zones,
@@ -91,6 +91,7 @@ locals {
         "privatelink.api.videoindexer.ai",
         "privatelink.azure-automation.net",
         "privatelink.siterecovery.windowsazure.com",
+        "privatelink.monitor.azure.com",
         "privatelink.oms.opinsights.azure.com",
         "privatelink.ods.opinsights.azure.com",
         "privatelink.agentsvc.azure-automation.net",
