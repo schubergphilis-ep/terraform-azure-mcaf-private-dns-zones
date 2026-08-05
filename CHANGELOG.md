@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.0](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/compare/v0.5.1...v1.0.0) (2026-08-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* multiregion & missing zones ([#2](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/issues/2))
+
+### 🚀 Features
+
+* multiregion & missing zones ([#2](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/issues/2)) ([4443922](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/commit/444392267a6cff3fc13bf015471eaa749a24e564))
+
 ## [0.5.1](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/compare/v0.5.0...v0.5.1) (2026-04-23)
 
 
@@ -72,4 +83,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fix Tag Limitation on Private DNS Zones ([#4](https://github.com/schubergphilis/terraform-azure-mcaf-private-dns-zones/pull/4)) ([109581b](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/commit/109581b79efdcb2ecffe40523b3531016c665292))
 
 ## 0.1.0 (2024-11-21)
-
