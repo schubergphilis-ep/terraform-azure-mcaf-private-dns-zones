@@ -3,14 +3,9 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "location" {
+variable "locations" {
   description = "Location used for the resource group and in some Private DNS Zones"
-  type        = string
-}
-
-variable "shortlocation" {
-  description = "shortcode of the location used in some Private DNS Zones"
-  type        = string
+  type        = set(string)
 }
 
 variable "tags" {
