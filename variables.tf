@@ -40,6 +40,6 @@ variable "zone_resolution_policies" {
 
 variable "partition_count" {
   description = "amount of private dns zones to pre-emptively create for partitioned DNS zones, defaults to 10 based on `https://github.com/Azure/static-web-apps/issues/983`, which is the only zone requiring a partition id"
-  type = number
-  default = 10
+  type        = number
+  default     = 10
 }

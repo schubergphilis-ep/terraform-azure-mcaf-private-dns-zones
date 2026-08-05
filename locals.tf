@@ -27,8 +27,8 @@ locals {
     "${local.location_lookup[location].short_name}.data.privatelink.azurecr.io",
     "privatelink.${local.location_lookup[location].short_name}.prometheus.monitor.azure.com"
   ]])
-  
-  partitioned_private_dns_zones = [ for i in range(var.partition_count + 1) : format("privatelink.%s.azurestaticapps.net",i) ]
+
+  partitioned_private_dns_zones = [for i in range(var.partition_count + 1) : format("privatelink.%s.azurestaticapps.net", i)]
 
   private_dns_zones = {
     for dns_zone in distinct(concat(var.additional_zones, local.location_private_dns_zones, local.partitioned_private_dns_zones,
