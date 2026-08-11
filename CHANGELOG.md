@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.1](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/compare/v1.0.0...v1.0.1) (2026-08-11)
+
+
+### 🐛 Fixes
+
+* remove incompatible zone ([#4](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/issues/4)) ([f0fffde](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/commit/f0fffde0434603d05eb372eb45cef1cff9fc3553))
+
 ## [1.0.0](https://github.com/schubergphilis-ep/terraform-azure-mcaf-private-dns-zones/compare/v0.5.1...v1.0.0) (2026-08-05)
 
 
