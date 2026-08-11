@@ -24,7 +24,6 @@ locals {
     "privatelink.${local.location_lookup[location].short_name}.azmk8s.io",
     "privatelink.${local.location_lookup[location].geo_code}.backup.windowsazure.com",
     "privatelink.${local.location_lookup[location].short_name}.azurecontainerapps.io",
-    "${local.location_lookup[location].short_name}.data.privatelink.azurecr.io",
     "privatelink.${local.location_lookup[location].short_name}.prometheus.monitor.azure.com"
   ]])
 
